@@ -30,16 +30,6 @@ def cal_checksum(payload):
     return round_digits - sum_digits
 
 
-# check the number of your credit card
-def check_credit_card(s):
-    checksum = int(s[15])
-    print(s[:15])
-    if checksum == cal_checksum(s[:15]):
-        return True
-    else:
-        return False
-
-
 # testcase 1
 payload = '62'
 print('checksum of', payload, 'is', cal_checksum(payload))
