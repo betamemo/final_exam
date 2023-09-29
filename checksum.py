@@ -21,13 +21,7 @@ def cal_checksum(payload):
 
     sum_digits = sum(digits)
 
-    # calculate nearest round number
-    if sum_digits % 10 == 0:
-        round_digits = sum_digits
-    else:
-        round_digits = sum_digits + (10 - (sum_digits % 10))
-
-    return round_digits - sum_digits
+    return (10 - (sum_digits % 10)) % 10
 
 
 # testcase 1
